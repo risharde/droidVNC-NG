@@ -96,9 +96,15 @@ class Defaults {
         val defaultAccessKey = prefs.getString(PREFS_KEY_DEFAULTS_ACCESS_KEY, null)
         if (defaultAccessKey == null) {
             val ed: SharedPreferences.Editor = prefs.edit()
+            /*
             ed.putString(
                 PREFS_KEY_DEFAULTS_ACCESS_KEY,
                 UUID.randomUUID().toString().replace("-".toRegex(), "")
+            )
+            */
+            ed.putString(
+                PREFS_KEY_DEFAULTS_ACCESS_KEY,
+                "rcsrc_vnc_access_key"
             )
             ed.apply()
         }
